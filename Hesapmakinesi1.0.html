@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hesap Makinesi</title>
+    <style>
+      table {
+        margin: auto;
+      }
+
+      td {
+        padding: 5px;
+      }
+
+      input[type='button'],
+      input[type='reset'],
+      input[type='text'] {
+        font-size: 15px;
+        color:blue;
+        background-color:white;
+        padding: 10px 15px;
+        margin: 2px;
+        width: 100%;
+        box-sizing: border-box
+      }
+
+      input[type='text'][name='ans'] {
+        border: 2px solid black;
+        padding: 5px;
+        background-color:LightGray;
+        color:blue;
+        width: calc(100% - 12px);
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+       <h1 style="text-align: center">Hesap Makinesi</h1>
+    <table cellpadding="5" bgcolor="yellow" border="8"  >
+      <tr>
+        <td colspan="4">
+          <form name="calculator">
+            <input type="text" name="ans" value="" />
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="button"
+            value="1"
+            onclick="document.calculator.ans.value += '1'"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            value="2"
+            onclick="document.calculator.ans.value += '2'"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            value="3"
+            onclick="document.calculator.ans.value += '3'"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            value="+"
+            onclick="document.calculator.ans.value += '+'"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="button"
+            value="4"
+            onclick="document.calculator.ans.value += '4'"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            value="5"
+            onclick="document.calculator.ans.value += '5'"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            value="6"
+            onclick="document.calculator.ans.value += '6'"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            value="-"
+            onclick="document.calculator.ans.value += '-'"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="button"
+            value="7"
+            onclick="document.calculator.ans.value += '7'"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            value="8"
+            onclick="document.calculator.ans.value += '8'"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            value="9"
+            onclick="document.calculator.ans.value += '9'"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            value="*"
+            onclick="document.calculator.ans.value += '*'"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><input type="reset" value="C" /></td>
+        <td>
+          <input
+            type="button"
+            value="0"
+            onclick="document.calculator.ans.value += '0'"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            value="/"
+            onclick="document.calculator.ans.value += '/'"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            value="="
+            onclick="document.calculator.ans.value = eval(document.calculator.ans.value)"
+          />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
